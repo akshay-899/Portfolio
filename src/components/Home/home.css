@@ -79,6 +79,7 @@
   color: white;
   background: linear-gradient(1500deg, rgba(78, 103, 229, 0.871) 23.3%,  rgba(229, 55, 55, 0.795) 70%);
   border: none;   
+  box-shadow: -0px 0px 15px rgba(248, 248, 249, 0.804);
     padding: 1rem 3rem;
     border-radius: 0.75rem; 
     cursor: pointer;
@@ -90,16 +91,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:40px 0rem;
+    margin:60px 0rem;
 }
 
 .btns:nth-of-type(2) {
-    margin:40px 300px;
+    margin:60px 300px;
 }
 
 .btns:hover {
     color: rgb(8, 8, 8);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 @media screen and (max-width:1000px) {
   .homeimage{

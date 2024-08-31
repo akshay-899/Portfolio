@@ -1,0 +1,93 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 4rem);
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #aboutme {
+    position: absolute;
+    top: 0; 
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    width: 100vw; 
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .aboutcontent {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    top: 2rem;
+    right:6rem;
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    font-weight: 400;
+  }
+  .content{
+    padding: 2.5rem 1rem;
+    border-radius: 5%;
+    box-shadow: -1px 1px 15px rgba(255, 0, 85, 0.804);
+  }
+
+  .myphoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+    position: relative;
+    border-radius:20%;
+    overflow: hidden;
+  }
+  .box{
+    position: relative;
+    top: 50px;
+    width: 370px;
+    height: 470px;
+    display: flex;
+    left: 7rem;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20%;
+    align-items: center;
+  }
+  .box::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 150%;
+    background: linear-gradient(1500deg, rgba(78, 103, 229, 0.871) 23.3%,  rgba(229, 55, 55, 0.795) 70%);;
+    box-shadow: 0 0 10px rgb(236, 231, 231);
+    animation: animate 4s linear infinite;
+  }
+  .box::after{
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border-radius: 25px;
+    animation: animate 4s linear infinite;
+  }
+  #highlight{
+    text-shadow: -0px -0px 25px rgb(25, 25, 255);
+    color: rgba(238, 80, 99, 0.804);
+  }
+  @keyframes animate {
+    0% {
+        transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

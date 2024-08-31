@@ -1,12 +1,14 @@
+// src/router/AppRouter.jsx
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import About from '../src/components/About/About';
-import Home from '../src/components/Home/Home';
-import Navbar from '../src/components/NavBar/Navbar'; 
-import Skills from '../src/components/Skill/Skill'; 
-import Projects from '../src/components/Projects/Project'; 
-import Contact from '../src/components/Contact/Contact';
+import Navbar from '../NavBar/Navbar';
+import About from '../About/About';
+import Home from '../Home/Home'; 
+import Skills from '../Skill/Skill'; 
+import Projects from '../Projects/Project';
+import Contact from '../Contact/Contact';
 
-function App() {
+const AppRouter = () => {
   return (
     <Router>
       <Navbar />
@@ -19,6 +21,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
-export default App;
+export default AppRouter;

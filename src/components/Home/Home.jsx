@@ -5,6 +5,7 @@ import About from '../About/About'
 import Skill from '../Skill/Skill'
 import Project from '../Projects/Project'
 import Contact from '../Contact/Contact'
+const link="https://drive.google.com/file/d/14rVWyJyfKvxTdFyuy5v15tgOwsrsZzvI/view?usp=sharing"
 
 function Home() {
   return (
@@ -13,8 +14,8 @@ function Home() {
       <div className="homecontent">
         <span id='hi'>Hi there,</span> I'm <span className="myname">Akshay Prabhu</span>
         <p id='homepara'>I am a <span id='job'>Software Developer</span></p>
-        <button className="btns">Resume</button>
-        <button className="btns">Contact Me</button>
+        <a href={link} className="btns">Resume</a>
+        <a href='/contact' className="btns">Contact Me</a>
       </div>
       <img src={programmer} alt="image" className="homeimage" />
     </div>

@@ -16,18 +16,20 @@
   display: flex;
   gap: 3rem;
   position: relative;
+  left: 2rem;
+  /* right: 2rem; */
   padding: 2rem;
   margin: 3rem 2rem 0rem 2rem;
   border-radius: 7%;
   background: rgba(225, 205, 205, 0.027);
-  border: 5px solid rgb(99, 99, 220);
+  border: 2px solid rgb(99, 99, 220);
   box-shadow: 0px 0px 30px rgb(255, 255, 255);
-  opacity: 0.8;
-  width: calc(100vw - 6rem);
+  width: calc(100vw - 8rem);
   height: 70vh;
   justify-content: center;
   align-items: center;
 }
+
 
 .skill-item {
     position: relative;
@@ -35,7 +37,7 @@
     justify-items: center;
     justify-content: center;
     border-radius: 50px 50px 50px 50px;
-    border: 5px solid rgb(239, 132, 132);
+    border: 2px solid rgb(239, 132, 132);
     width: 500px;
     height: 500px;
     box-shadow: 0px 0px 20px rgba(232, 232, 232, 0.53);
@@ -50,10 +52,9 @@
     top: 30px;
     width: fit-content;
     height: 5rem;
+    transition: box-shadow 0.3s ease;
   }
-  .skill-item-icon:hover {
-    box-shadow: -1px 2px 40px rgb(245, 242, 242);
-  }
+  
 
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "../Skill/skill.css";
-// import reactlogo from '/assets/react.png'
+// import reactlogo from '/assets/react.svg'
 import django from "/assets/django.svg";
 import express from "/assets/express.svg";
 import mysql from "/assets/mysql.png";

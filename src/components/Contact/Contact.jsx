@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './Contact.css';
 import contactimg from '/assets/contactimg.png';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
-import Swal from 'sweetalert2';
-import Footer from '../Footer/Footer';
+import Swal from 'sweetalert2'; 
 
 function Contact() {
   const [formErrors, setFormErrors] = useState({});

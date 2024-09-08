@@ -7,7 +7,7 @@ import Project from '../Projects/Project'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom';
-const link="https://drive.google.com/file/d/14rVWyJyfKvxTdFyuy5v15tgOwsrsZzvI/view?usp=sharing"
+const link="https://drive.google.com/file/d/1JRgEqVxg8QOxogKv7eJVKuwPVJgN9mCi/view?usp=drive_link"
 
 function Home() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Contact.css';
+import './contact.css';
 import contactimg from '/assets/contactimg.png';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Swal from 'sweetalert2'; 

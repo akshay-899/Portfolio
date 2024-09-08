@@ -1,0 +1,14 @@
+.footer {
+    position: relative;
+    text-align: center;
+    padding: 20px; 
+    background-color: #0e0e0e;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 100%; 
+    bottom: 0; 
+  }
+  #myname{
+    text-shadow: 0 0 20px rgba(108, 125, 251, 0.83);
+    color: rgb(245, 23, 119);
+  }

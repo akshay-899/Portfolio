@@ -5,6 +5,7 @@ import About from '../About/About'
 import Skill from '../Skill/Skill'
 import Project from '../Projects/Project'
 import Contact from '../Contact/Contact'
+import Footer from '../Footer/Footer'
 const link="https://drive.google.com/file/d/14rVWyJyfKvxTdFyuy5v15tgOwsrsZzvI/view?usp=sharing"
 
 function Home() {
@@ -23,6 +24,7 @@ function Home() {
     <Skill/>
     <Project/>
     <Contact/>
+    <Footer/>
     </>
   )
 }

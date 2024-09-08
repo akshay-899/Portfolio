@@ -48,7 +48,7 @@
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: -0px 0px 15px rgb(255, 255, 255);
+    box-shadow: -1px -1px 10px rgb(241, 99, 99);
     gap: 1.5rem;
     color: white;
 }
@@ -61,7 +61,8 @@ input, textarea {
     font-size: 1rem;
     padding: 0.5rem;
     border-radius: 0.25rem;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 0 10px rgb(85, 70, 251);
     max-width: 100%;
     min-width: 100%;
     color: white;

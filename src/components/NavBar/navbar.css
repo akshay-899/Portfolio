@@ -1,7 +1,6 @@
 .navbar {
   height: 5rem;
   width: 100vw;
-  margin: fit-content auto;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -10,9 +9,8 @@
   top: 0;
   z-index: 3;
   background-color: #11171b;
-  border: none;
-
 }
+
 .logo {
   width: 200px;
   height: fit-content;
@@ -20,15 +18,15 @@
   padding: 0px 15px;
   object-fit: cover;
   mix-blend-mode: lighten;
+}
+
+.navcontent {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
-.nav-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .nav-link {
   text-decoration: none;
   margin: 3rem 1rem;
@@ -36,7 +34,6 @@
   color: #ffffff;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease, background-color 4.3s ease;
 }
 
 .nav-link:hover {
@@ -44,4 +41,76 @@
   padding-bottom: 0.5rem;
   color: #6271bbfc;
   border-radius: 50px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 5;
+  width: 30px;
+  height: 20px;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+  .navcontent {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    height: 100vh;
+    width:100vw;
+    background-color: #11171b;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navcontent.open {
+    transform: translateX(0);
+    visibility: visible;
+    
+  }
+
+  .nav-link {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  @media screen and (max-width: 480px) {
+    .hamburger {
+      width: 25px;
+      height: 18px;
+    }
+    .hamburger .bar {
+      height: 2px;
+    }
+  }
 }

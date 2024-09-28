@@ -158,14 +158,14 @@
   }
   .btns {
     padding: 1rem 0; 
-    font-size: 0.75rem; 
-    margin: -10px 0; 
+    font-size: 1rem; 
+    margin: 30px -10px; 
     bottom: 3rem; 
-    width: 20vw; 
+    width: 30vw; 
   }
 
   .btns:nth-of-type(2) {
-    margin: -10px 200px; 
+    margin: 30px 200px; 
   }
   
 }
@@ -183,6 +183,7 @@
   .homecontent{
     position: relative;
     left: -7rem;
+    top: -30px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -200,7 +201,7 @@
   .btns {
     padding: 1rem 3rem; 
     font-size: 1rem; 
-    margin: -15px 0px;
+    margin: -35px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,6 +212,6 @@
   .btns:nth-of-type(2) {
     padding: 1rem ;
         width: 150px;
-    margin: -15px 150px;
+    margin: -35px 150px;
   }
 }

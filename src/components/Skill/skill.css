@@ -1,6 +1,6 @@
 .skillmain {
   width: 100vw;
-  height: calc(100vh - 4rem);
+  height: auto;
 }
 
 .skill {
@@ -27,6 +27,7 @@
   height: 70vh;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .skill-item {
@@ -54,11 +55,14 @@
 }
 
 @media (max-width: 768px) {
-  .skillmain {
-    height: auto;
+  .skillmain {  
+    height: min-content;
+    width: 100%;
   }
   .skill {
+    margin-top: 10px;
     font-size: 2.5rem;
+    font-weight: 900;
   }
   .skillbox {
     flex-direction: column;
@@ -66,12 +70,16 @@
     margin: 1.5rem 1rem;
     width: calc(100vw - 4rem);
     height: auto;
-    gap: 2rem;
+    gap: 2rem;  
+    left:10px;
+    margin-bottom: 100px;
+
   }
   .skill-item {
     width: 350px;
-    height: 350px;
     font-size: 1.2rem;
+    display: grid;
+    justify-content: center;
     padding: 15px;
   }
   .skill-item-icon {
@@ -94,7 +102,7 @@
   }
 
   .skill-item {
-    width: 80%;
+    width: 90%;
     font-size: 1rem;
     padding: 25px;
   }
@@ -109,4 +117,3 @@
     font-size: 1.2rem;
   }
 }
-  

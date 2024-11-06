@@ -1,9 +1,8 @@
-.projects-page {
+ .projects-page {
     position: relative;
     top: 0;
     width: 100vw;
-    height: calc(100vh - 4rem);
-    height: fit-content;
+    height: auto;
   }
   
   .projects-heading {
@@ -14,29 +13,17 @@
     color: white;
     font-weight: 900;
   }
-  
-  /* .projects-container {
-
-    width: calc(100vw - 8rem);
-    margin: 0 auto;
-    display: grid;
-    padding: 20px;
-    color: red;
-    box-shadow: 2px 0px 10px rgb(51, 100, 235);
-    border-radius: 15px;
-  }
-   */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    width: 100vw;
-    padding: 0px 80px;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    width: 100%;
+    padding: 10px 25px; 
+    gap: 30px;
     justify-items: center;
   }
   
   .project-card {
-    width: 100vw;
+    width: 100%;
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(20, 100, 212, 0.581);
@@ -44,10 +31,10 @@
     text-decoration: none;
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-      box-shadow: 0 4px 10px rgb(181, 74, 74);
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 4px 10px rgb(181, 74, 74);
     transform: translateY(-5px);
   }
   
@@ -66,10 +53,57 @@
     font-size: 1.5rem;
     margin: 5px;
     color: #2b86ee;
-  }  
+  }
+  
   .project-description {
     font-size: 0.9rem;
     color: #fbfbfb;
     word-break: keep-all;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .projects-heading {
+      font-size: 2rem; 
+    }
+  
+    .projects-grid {
+      position: relative;
+      display: grid;
+      justify-content: center;
+      padding: 10px 20px;
+      gap: 2rem;
+      margin-bottom: 25px;
+    }
+  
+    .project-card {
+      max-width: 90%; 
+    }
+  
+    .project-title {
+      font-size: 1.2rem; 
+    }
+  
+    .project-description {
+      font-size: 0.8rem; 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .projects-heading {
+      font-size: 1.8rem;
+    }
+  
+    .project-card {
+      max-width: 100%;
+    }
+  
+    .project-title {
+      font-size: 1rem; 
+    }
+  
+    .project-description {
+      font-size: 0.9rem; 
+    }
   }
   

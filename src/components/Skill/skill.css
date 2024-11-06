@@ -1,6 +1,6 @@
 .skillmain {
   width: 100vw;
-  height: calc(100vh - 4rem);   
+  height: calc(100vh - 4rem);
 }
 
 .skill {
@@ -17,7 +17,6 @@
   gap: 3rem;
   position: relative;
   left: 2rem;
-  /* right: 2rem; */
   padding: 2rem;
   margin: 3rem 2rem 0rem 2rem;
   border-radius: 7%;
@@ -30,32 +29,84 @@
   align-items: center;
 }
 
-
 .skill-item {
-    position: relative;
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-    border-radius: 50px 50px 50px 50px;
-    border: 2px solid rgb(239, 132, 132);
-    width: 500px;
-    height: 500px;
-    box-shadow: 0px 0px 20px rgba(232, 232, 232, 0.53);
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 20px;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 2px solid rgb(239, 132, 132);
+  width: 500px;
+  height: 500px;
+  box-shadow: 0px 0px 20px rgba(232, 232, 232, 0.53);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 20px;
+}
+
+.skill-item-icon {
+  position: relative;
+  top: 30px;
+  width: fit-content;
+  height: 5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .skillmain {
+    height: auto;
   }
-  
+  .skill {
+    font-size: 2.5rem;
+  }
+  .skillbox {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1.5rem 1rem;
+    width: calc(100vw - 4rem);
+    height: auto;
+    gap: 2rem;
+  }
+  .skill-item {
+    width: 350px;
+    height: 350px;
+    font-size: 1.2rem;
+    padding: 15px;
+  }
   .skill-item-icon {
-    position: relative;
-    top: 30px;
-    width: fit-content;
-    height: 5rem;
-    transition: box-shadow 0.3s ease;
+    height: 3.5rem;
   }
+  .skill-item .frameworks-and-library,
+  .skill-item .programming-languages,
+  .skill-item .tools {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill {
+    font-size: 2rem;
+  }
+
+  .skillbox {
+    gap: 2rem;
+  }
+
+  .skill-item {
+    width: 80%;
+    font-size: 1rem;
+    padding: 25px;
+  }
+
+  .skill-item-icon {
+    height: 3.1rem;
+  }
+
+  .skill-item .frameworks-and-library,
+  .skill-item .programming-languages,
+  .skill-item .tools {
+    font-size: 1.2rem;
+  }
+}
   
-
-
-
-

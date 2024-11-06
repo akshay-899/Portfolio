@@ -144,7 +144,9 @@
     left: -5px;
     max-width: 350px;
   }
-
+  .content{
+    padding: 0.25rem 0.25rem;
+  }
   .aboutcontent {
     position: relative;
     right:3px;

@@ -55,7 +55,10 @@ function Contact() {
         icon: "success",
         title: "Message Sent",
         showConfirmButton: false, 
-        timer: 1000
+        timer: 1000,
+        customClass: {
+          popup: 'swal-centered' // Adds custom class to adjust modal positioning
+        }
       }); 
       event.target.reset(); 
     } else {

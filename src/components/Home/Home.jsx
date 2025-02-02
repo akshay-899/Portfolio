@@ -28,7 +28,6 @@ function Home() {
     <Project/>
     <Contact/>
     <Footer/>
-    
     </>
   )
 }

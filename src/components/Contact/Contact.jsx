@@ -92,8 +92,6 @@ function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Contact Form */}
           <form className="contact-form" onSubmit={onSubmit}>
             <div className="input-group">
               <label>Name</label>

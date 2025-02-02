@@ -8,7 +8,7 @@ background: transparent;
 }
 
 body{
-cursor: url('./assets/cursor.png'), auto;
+cursor: url('./public/assets/cursor.png'), auto;
 background-color: #11171b;
 color: white;
 overflow-x: hidden;

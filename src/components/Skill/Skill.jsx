@@ -1,7 +1,7 @@
 import React from "react";
 import "../Skill/skill.css";
-// import reactlogo from '/assets/react.svg'
-import django from "/assets/django.svg";
+import reactlogo from '/assets/react.svg'
+// import django from "/assets/django.svg";
 import express from "/assets/express.svg";
 import mysql from "/assets/mysql.png";
 import mongodb from "/assets/mongo.svg";
@@ -17,15 +17,16 @@ import canva from "/assets/canva.svg";
 function Skill() {
   return (
     <>
+    <div className="skill fade-in">
       <div className="skillmain">
         <div className="skill">Skills</div>
         <div className="skillbox">
           <div className="skill-item">
             <div className="frameworks-and-library">Web Development</div>
               <img
-                src={django}
+                src={reactlogo}
                 className="skill-item-icon"
-                title="Django"
+                title="React"
               ></img>
               <img
                 src={express}
@@ -80,6 +81,7 @@ function Skill() {
             />
           </div>
         </div>
+      </div>
       </div>
     </>
   );

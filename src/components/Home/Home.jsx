@@ -7,11 +7,12 @@ import Project from '../Projects/Project'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom';
-const link="https://drive.google.com/file/d/1JRgEqVxg8QOxogKv7eJVKuwPVJgN9mCi/view?usp=drive_link"
+const link="https://drive.google.com/file/d/1QemJrwSGooG0kWh7eFSatnOgXjf5Yn6W/view?usp=drive_link"
 
 function Home() {
   return (
     <>
+  <div className='home fade-in'>
     <div className='home'>
       <div className="homecontent">
         <span id='hi'>Hi there,</span> I'm <span className="myname">Akshay Prabhu</span>
@@ -21,11 +22,13 @@ function Home() {
       </div>
       <img src={programmer} alt="image" className="homeimage" />
     </div>
+  </div>  
     <About/>
     <Skill/>
     <Project/>
     <Contact/>
     <Footer/>
+    
     </>
   )
 }

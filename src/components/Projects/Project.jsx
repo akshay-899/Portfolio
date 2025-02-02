@@ -54,6 +54,7 @@ function Project() {
   ];
 
   return (
+    <div className="project fade-in">
     <div className="projects-page">
       <h1 className="projects-heading">Projects</h1>
         <div className="projects-grid">
@@ -73,6 +74,7 @@ function Project() {
             </a>
           ))}
         </div>
+      </div>
       </div>
   );
 }

@@ -1,53 +1,75 @@
+/* General Styles */
 .contact-container {
   width: 100vw;
-  height: auto;
-  overflow: hidden;
+  /* min-height: 100vh; */
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #11171b;
 }
 
 #contact {
-  display: flex;
-  justify-content: center;
   font-size: 3rem;
   font-weight: 900;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  text-decoration: underline;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .contact-section {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
 .image-section {
-  width: 50%;
+  width: 45%;
   text-align: center;
-  position: relative;
 }
 
 .contactimg {
-  width: fit-content;
-  height: 500px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  position: relative;
-  left: -2rem;
 }
 
 .social-icons {
   display: flex;
-  position: relative;
-  top: -10px;
-  left: 10rem;
-  gap: 7rem;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .social-icons a {
   font-size: xx-large;
+  color: white;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  transform: translateY(-5px);
+}
+
+.github a {
+  color: #ffffff; /* GitHub white */
+}
+
+.linkedin a {
+  color: #0e76a8; /* LinkedIn blue */
+}
+
+.instagram a {
+  color: #c13584; /* Instagram pink */
 }
 
 .contact-form {
-  position: relative;
-  right: 4rem;
-  width: 50%;
+  width: 45%;
   height: fit-content;
   padding: 2rem;
   border-radius: 5%;
@@ -57,6 +79,7 @@
   box-shadow: -1px -1px 10px rgb(241, 99, 99);
   gap: 1.5rem;
   color: white;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .input-group {
@@ -70,11 +93,12 @@ textarea {
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  box-shadow: 0 0 10px rgb(85, 70, 251);
+  box-shadow: 0 0 10px rgba(20, 100, 212, 0.851);
   max-width: 100%;
   min-width: 100%;
   color: white;
-  max-height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
 }
 
 button {
@@ -85,83 +109,53 @@ button {
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
 }
 
 button:hover {
-  transition: 0.4s ease-in-out;
   background-color: #0072b1;
-}
-
-.instagram a {
-  color: #c13584;
-}
-
-.linkedin a {
-  color: #0e76a8;
-}
-
-.github a {
-  color: #ffffff;
-}
-
-.instagram :hover {
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
-  transform: translateY(-5px);
-}
-
-.linkedin :hover {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
-  transform: translateY(-5px);
-}
-
-.github :hover {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-  transform: translateY(-5px);
 }
 
 .error {
   color: red;
   font-size: 0.9rem;
 }
-.swal-centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-50%, -50%) !important;
-  top: 50% !important;
-  left: 50% !important;
-}
 
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .contact-container {
+    margin-top: 50px;
+  }
+
   #contact {
     font-size: 2rem;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
   .contact-section {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 
   .image-section {
-    display: none;
+    display: none; 
   }
 
   .contact-form {
     width: 90%;
-    right: 0;
     padding: 1rem;
-    gap: 1.5rem;
     box-shadow: none;
+    gap: 75px;
+    background-color: transparent;
   }
 
   .social-icons {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 1.5rem;
     margin-top: 1rem;
-    position: static;
   }
 
   input,
@@ -173,5 +167,15 @@ button:hover {
   button {
     padding: 0.5rem;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 2rem; /* Adjust spacing between icons */
+  }
+
+  .social-icons a {
+    font-size: 2rem; /* Increase icon size for better visibility */
   }
 }

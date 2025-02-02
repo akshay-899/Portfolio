@@ -8,6 +8,7 @@
   position: relative;
   margin-bottom: 20px;
   font-weight: 900;
+  text-decoration: underline;
   justify-content: center;
   font-size: 3rem;
 }
@@ -27,7 +28,7 @@
   height: 70vh;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .skill-item {
@@ -44,6 +45,7 @@
   font-weight: 900;
   text-align: center;
   padding: 20px;
+  text-decoration: none;
 }
 
 .skill-item-icon {

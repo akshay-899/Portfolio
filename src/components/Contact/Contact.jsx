@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 
 function Contact() {
   const [formErrors, setFormErrors] = useState({});
+
   const validateForm = (formData) => {
     const errors = {};
     if (!formData.get('name').trim()) {
@@ -36,7 +37,6 @@ function Contact() {
     }
 
     formData.append("access_key", "593f9979-cddc-4f52-8d74-a9437baee11f");
-
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
@@ -57,7 +57,7 @@ function Contact() {
         showConfirmButton: false, 
         timer: 1000,
         customClass: {
-          popup: 'swal-centered' // Adds custom class to adjust modal positioning
+          popup: 'swal-centered' 
         }
       }); 
       event.target.reset(); 
@@ -67,51 +67,56 @@ function Contact() {
   };
 
   return (
-    <div className="contact-container">
-      <h2 id='contact'>Contact Me</h2>
-      <div className="contact-section">
-        <div className="image-section">
-          <img src={contactimg} alt="contact-me-img" className="contactimg"/>
-          <div className="social-icons">
-            <div className="github">
-              <a href="https://github.com/akshay-899" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
-              </a>
-            </div>
-            <div className="linkedin">
-              <a href="https://www.linkedin.com/in/m-akshay-prabhu-700912229/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
-              </a>
-            </div>
-            <div className="instagram">
-              <a href="https://www.instagram.com/m_akshay_prabhu?igsh=MTc3bHN5NmI1cmJtbw==" target="_blank" rel="noopener noreferrer">
-                <FaInstagram />
-              </a>
+    <div className="contact fade-in">
+      <div className="contact-container">
+        <h2 id='contact'>Contact Me</h2>
+        <div className="contact-section">
+          {/* Image Section */}
+          <div className="image-section">
+            <img src={contactimg} alt="contact-me-img" className="contactimg"/>
+            <div className="social-icons">
+              <div className="github">
+                <a href="https://github.com/akshay-899" target="_blank" rel="noopener noreferrer">
+                  <FaGithub />
+                </a>
+              </div>
+              <div className="linkedin">
+                <a href="https://www.linkedin.com/in/m-akshay-prabhu-700912229/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin />
+                </a>
+              </div>
+              <div className="instagram">
+                <a href="https://www.instagram.com/m_akshay_prabhu?igsh=MTc3bHN5NmI1cmJtbw==" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram />
+                </a>
+              </div>
             </div>
           </div>
+
+          {/* Contact Form */}
+          <form className="contact-form" onSubmit={onSubmit}>
+            <div className="input-group">
+              <label>Name</label>
+              <input type="text" name="name" required />
+              {formErrors.name && <span className="error">{formErrors.name}</span>}
+            </div>
+            <div className="input-group">
+              <label>Email</label>
+              <input type="email" name="email" required />
+              {formErrors.email && <span className="error">{formErrors.email}</span>}
+            </div>
+            <div className="input-group">
+              <label>Phone Number (Optional)</label>
+              <input type="text" name="phone_number"/>
+            </div>
+            <div className="input-group">
+              <label>Message</label>
+              <textarea name="message" required></textarea>
+              {formErrors.message && <span className="error">{formErrors.message}</span>}
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
-        <form className="contact-form" onSubmit={onSubmit}>
-          <div className="input-group">
-            <label>Name</label>
-            <input type="text" name="name" required />
-            {formErrors.name && <span className="error">{formErrors.name}</span>}
-          </div>
-          <div className="input-group">
-            <label>Email</label>
-            <input type="email" name="email" required />
-            {formErrors.email && <span className="error">{formErrors.email}</span>}
-          </div>
-          <div className="input-group">
-            <label>Phone Number (Optional)</label>
-            <input type="text" name="phone_number"/>
-          </div>
-          <div className="input-group">
-            <label>Message</label>
-            <textarea name="message" required></textarea>
-            {formErrors.message && <span className="error">{formErrors.message}</span>}
-          </div>
-          <button type="submit">Send Message</button>
-        </form>
       </div>
     </div>
   );
